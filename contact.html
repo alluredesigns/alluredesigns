@@ -11,12 +11,12 @@ body {
   font-family: 'Poppins', sans-serif;
   margin:0;
   padding:0;
-  background:#faf8f5;
   color:#111;
+  background:#faf8f5;
 }
 header {
   background:#000;
-  color:#fff;
+  color:#f4b6c2;
   text-align:center;
   padding:3rem 1rem;
 }
@@ -36,14 +36,16 @@ nav a {
   margin:0 15px;
 }
 nav a:hover {
-  color:#ff69b4;
+  color:#f4b6c2;
 }
 .section {
   max-width:800px;
   margin:3rem auto;
   padding:2rem;
+  text-align:center;
   background:#fff5f9;
   border-radius:12px;
+  animation: fadeIn 1.2s ease-in;
 }
 .section h2 {
   font-size:2rem;
@@ -57,15 +59,15 @@ form {
   display:flex;
   flex-direction:column;
 }
-input, textarea {
+input,textarea {
   padding:0.8rem;
   margin:0.5rem 0;
   font-size:1rem;
   border-radius:4px;
   border:1px solid #ccc;
 }
-input:focus, textarea:focus {
-  border-color:#ff69b4;
+input:focus,textarea:focus {
+  border-color:#f4b6c2;
   outline:none;
 }
 button {
@@ -79,13 +81,17 @@ button {
   cursor:pointer;
 }
 button:hover {
-  background:#ff69b4;
+  background:#f4b6c2;
 }
 footer {
   background:#111;
   color:#fff;
   text-align:center;
   padding:1rem;
+}
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(10px)}
+  to { opacity:1; transform:translateY(0)}
 }
 </style>
 </head>
