@@ -1,183 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<title>Allure Designs</title>
-<!-- Import a Chic Font from Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff0f5;
-  color: #333;
-}
-header {
-  background: #ffe9f3;
-  color: #ff69b4;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-header h1 {
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
-  color: #ff69b4;
-}
-header p {
-  font-size: 1.2rem;
-  color: #555;
-}
-nav {
-  background: #ff69b4;
-  padding: 1rem;
-  text-align: center;
-}
-nav a {
-  color: #fff;
-  font-weight: bold;
-  margin: 0 15px;
-  text-decoration: none;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-section {
-  padding: 3rem 1rem;
-  text-align: center;
-}
-section h2 {
-  font-size: 2rem;
-  color: #ff69b4;
-  font-family: 'Playfair Display', serif;
-}
-.products {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.product {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,.1);
-  margin: 1rem;
-  flex: 1 1 250px;
-}
-.product h3 {
-  color: #ff69b4;
-}
-footer {
-  background: #ffe9f3;
-  color: #555;
-  text-align: center;
-  padding: 1rem;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Allure Designs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin:0; padding:0;
+      font-family:'Poppins',sans-serif;
+      background:#fff0f5; color:#333;
+    }
+    a {text-decoration:none; color:inherit;}
+    header.hero {
+      position:relative; background:url('hero-bg.jpg')center/cover no-repeat; height:70vh;
+      display:flex; justify-content:center; align-items:center;
+    }
+    header.hero::after {
+      content:""; position:absolute; inset:0; background:rgba(255,255,255,0.6);
+    }
+    header.hero .content {
+      position:relative; text-align:center;
+    }
+    header.hero h1 {
+      font-size:3rem;
+      font-family:'Playfair Display',serif;
+      color:#ff69b4;
+    }
+    header.hero p {
+      font-size:1.2rem; color:#555; margin:0.5rem 0;
+    }
+    .btn-cta {
+      background:#ff69b4; color:#fff; padding:1rem 2rem;
+      border:none; border-radius:8px; font-size:1rem; font-weight:500;
+      cursor:pointer;
+    }
+    section {max-width:1000px; margin:3rem auto; padding:0 1rem;}
+    .values, .features, .testimonials {
+      display:grid; gap:2rem;
+    }
+    .values {grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); text-align:center;}
+    .values div {padding:1rem;}
+    .values div h3 {font-family:'Playfair Display',serif; color:#ff69b4;}
+    .features {grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+    .feature {background:#fff; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,.1); padding:1.5rem; text-align:center;}
+    .feature h3 {color:#ff69b4; font-family:'Playfair Display',serif;}
+    .testimonials {grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+    .testimonial {background:#ffe9f3; border-radius:12px; padding:1.5rem; font-style:italic;}
+    footer {
+      background:#ffe9f3; padding:2rem 1rem; text-align:center; color:#555;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>Allure Designs</h1>
-  <p>Modern, Chic & Stylish Digital Designs</p>
+
+<header class="hero">
+  <div class="content">
+    <h1>Allure Designs</h1>
+    <p>Chic Digital Invitations, Planners & More</p>
+    <button class="btn-cta" onclick="location.href='shop.html'">Shop Now</button>
+  </div>
 </header>
+
 <nav>
-  <a href="#invitations">Invitations</a>
-  <a href="#templates">Templates</a>
-  <a href="#stickers">Stickers</a>
+  <!-- add nav styling similar to before -->
+  <section class="values">
+    <div><h3>Elegant</h3><p>Every design exudes timeless style.</p></div>
+    <div><h3>Customizable</h3><p>Tailor each product to your vibe.</p></div>
+    <div><h3>Chic & Modern</h3><p>Polished aesthetics, ready to impress.</p></div>
+  </section>
+
+  <section class="features">
+    <div class="feature"><h3>Invitations</h3><p>Birthday, Wedding & Party invites.</p><button class="btn-cta">View Designs</button></div>
+    <div class="feature"><h3>Planners & Budgeting</h3><p>Stylish templates for daily planning.</p><button class="btn-cta">Explore</button></div>
+    <div class="feature"><h3>Stickers</h3><p>Digital stickers for mood & color.</p><button class="btn-cta">Browse</button></div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonial"><p>“The invitations were stunning and so easy to customize!” – Emily R.</p></div>
+    <div class="testimonial"><p>“I’m obsessed with the chic planner templates!” – Sarah L.</p></div>
+    <div class="testimonial"><p>“Total boujee vibes, exactly what I wanted.” – Mia T.</p></div>
+  </section>
 </nav>
-<section id="invitations">
-  <h2>Digital Invitations</h2>
-  <div class="products">
-    <div class="product"><h3>Birthday Invites</h3><p>Modern, customizable digital invites for any theme!</p></div>
-    <div class="product"><h3>Wedding Invites</h3><p>Stylish and elegant designs for your special day!</p></div>
-  </div>
-</section>
-<section id="templates">
-  <h2>Budgeting Templates & Planners</h2>
-  <div class="products">
-    <div class="product"><h3>Budget Templates</h3><p>Organize your finances beautifully and effectively!</p></div>
-    <div class="product"><h3>Daily Planners</h3><p>Modern daily planning for productivity and style!</p></div>
-  </div>
-</section>
-<section id="stickers">
-  <h2>Stickers & More</h2>
-  <div class="products">
-    <div class="product"><h3>Digital Stickers</h3><p>Perfect for digital planning or printing at home!</p></div>
-  </div>
-</section>
+
 <footer>
-  <p>&copy; 2025 Allure Designs | Chic. Stylish. Professional.</p>
+  <p>&copy; 2025 Allure Designs • Chic. Stylish. Professional.</p>
 </footer>
+
 </body>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="index.html#invitations">Invitations</a>
-  <a href="index.html#templates">Templates</a>
-  <a href="index.html#stickers">Stickers</a>
-  <a href="contact.html">Contact</a> <!-- Add this! -->
-</nav>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>About Allure Designs</title>
-<!-- Chic Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fff0f5;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-header {
-  background: #ffe9f3;
-  text-align: center;
-  padding: 3rem 1rem;
-}
-header h1 {
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
-  color: #ff69b4;
-}
-nav {
-  background: #ff69b4;
-  text-align: center;
-  padding: 1rem;
-}
-nav a {
-  color: #fff;
-  font-weight: bold;
-  margin: 0 15px;
-  text-decoration: none;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-section {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  text-align: center;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,.1);
-}
-section h2 {
-  font-size: 2rem;
-  font-family: 'Playfair Display', serif;
-  color: #ff69b4;
-}
-section p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.5;
-}
-footer {
-  background: #ffe9f3;
-  color: #555;
-  text-align: center;
-  padding: 1rem;
+</html>
